@@ -1,0 +1,28 @@
+{
+  "name": "@mixpeek/mcp",
+  "version": "0.1.0",
+  "description": "Mixpeek MCP server launcher (Node wrapper for Python stdio server)",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mixpeek-mcp": "bin/mixpeek-mcp.js"
+  },
+  "files": [
+    "bin",
+    "README.md",
+    "Dockerfile"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "prepublishOnly": "node -e \"process.exit(0)\""
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mixpeek",
+    "openapi"
+  ]
+}
+
