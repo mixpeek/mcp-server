@@ -51,7 +51,7 @@ cp env.sample .env
 Env vars:
 
 - `MIXPEEK_API_KEY`: Your Mixpeek API key (optional if endpoints don't require auth)
-- `MIXPEEK_API_BASE`: Default `https://api.mixpeek.com` (or `https://server-xb24.onrender.com` for testing)
+- `MIXPEEK_API_BASE`: Default `https://api.mixpeek.com`
 - `MIXPEEK_OPENAPI_URL`: Defaults to `<API_BASE>/openapi.json` (or `/docs/openapi.json`)
 - `MIXPEEK_NAMESPACE`: Optional namespace value to send via `X-Namespace`
 - `MCP_RATE_MAX_CALLS`: Default `20` per `MCP_RATE_PER_SECONDS`
@@ -150,7 +150,7 @@ pytest -q tests/test_live_integration.py
 ### References
 
 - Mixpeek docs: `https://docs.mixpeek.com/overview/introduction`
-- Mixpeek OpenAPI: `https://server-xb24.onrender.com/docs/openapi.json`
+- Mixpeek OpenAPI: `https://api.mixpeek.com/docs/openapi.json`
  - MCP overview: `https://modelcontextprotocol.io/docs/getting-started/intro`
 
 ### Notes
