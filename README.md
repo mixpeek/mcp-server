@@ -31,6 +31,16 @@ npx @mixpeek/mcp
 npm i -g @mixpeek/mcp
 ```
 
+Homebrew (macOS):
+```bash
+# tap and install (once the tap is live)
+brew tap mixpeek/tap https://github.com/mixpeek/homebrew-tap
+brew install mixpeek-mcp
+
+# temporary local formula (dev/testing):
+brew install --build-from-source Formula/mixpeek-mcp.rb
+```
+
 2) Configure (env or your MCP client secret store)
 
 ```bash
@@ -81,6 +91,21 @@ docker run --rm -it \
   -e MIXPEEK_NAMESPACE=your_namespace \
   ghcr.io/mixpeek/mcp:latest
 ```
+
+### Distribution
+
+- npm: `@mixpeek/mcp` → `https://www.npmjs.com/package/@mixpeek/mcp`
+- PyPI: `mixpeek-mcp` → `https://pypi.org/project/mixpeek-mcp/` (publish pending)
+- Docker Hub: `mixpeek/mcp` (pending push), GHCR: `ghcr.io/mixpeek/mcp` (pending push)
+- Homebrew: `mixpeek/tap/mixpeek-mcp` (tap repo to be created)
+
+### Submit to Docker MCP Registry
+
+We prepared `registry.json` compatible with the [Official Docker MCP Registry](https://github.com/docker/mcp-registry/tree/main). To submit:
+
+1) Fork the registry and create a new entry under the appropriate directory per their CONTRIBUTING guide.
+2) Include our `registry.json` (update Docker image reference if you publish under a different org/tag).
+3) Open a PR. Upon approval, it will appear in the MCP catalog and Docker Desktop's MCP Toolkit.
 
 ### Configuration
 
