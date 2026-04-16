@@ -1,0 +1,64 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.mixpeek/mcp-server",
+  "title": "Mixpeek",
+  "description": "Give your agent eyes. Search video, images, and audio via Mixpeek's multimodal retrieval API — auto-exposed as MCP tools from the Mixpeek OpenAPI spec.",
+  "repository": {
+    "url": "https://github.com/mixpeek/mcp-server",
+    "source": "github"
+  },
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@mixpeek/mcp",
+      "version": "0.1.1",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "MIXPEEK_API_KEY",
+          "description": "Your Mixpeek API key (https://mixpeek.com)",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "MIXPEEK_NAMESPACE",
+          "description": "Default namespace; sent as the X-Namespace header",
+          "isRequired": false
+        },
+        {
+          "name": "MIXPEEK_API_BASE",
+          "description": "Override the API base URL (default: https://api.mixpeek.com)",
+          "isRequired": false,
+          "default": "https://api.mixpeek.com"
+        }
+      ]
+    },
+    {
+      "registryType": "pypi",
+      "identifier": "mixpeek-mcp",
+      "version": "0.1.1",
+      "runtimeHint": "uvx",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "MIXPEEK_API_KEY",
+          "description": "Your Mixpeek API key (https://mixpeek.com)",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "MIXPEEK_NAMESPACE",
+          "description": "Default namespace; sent as the X-Namespace header",
+          "isRequired": false
+        },
+        {
+          "name": "MIXPEEK_API_BASE",
+          "description": "Override the API base URL (default: https://api.mixpeek.com)",
+          "isRequired": false,
+          "default": "https://api.mixpeek.com"
+        }
+      ]
+    }
+  ]
+}

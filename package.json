@@ -1,6 +1,7 @@
 {
   "name": "@mixpeek/mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "mcpName": "io.github.mixpeek/mcp-server",
   "description": "Mixpeek MCP server launcher (Node wrapper for Python stdio server)",
   "license": "MIT",
   "type": "module",
@@ -23,6 +24,9 @@
     "model-context-protocol",
     "mixpeek",
     "openapi"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mixpeek/mcp-server"
+  }
 }
-

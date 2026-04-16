@@ -2,6 +2,8 @@
   <img src="assets/header.png" alt="Mixpeek MCP Server" width="800" />
 </p>
 
+<!-- mcp-name: io.github.mixpeek/mcp-server -->
+
 ## Mixpeek MCP Server
 
 A lightweight, production-friendly Model Context Protocol (MCP) server for Mixpeek that:
