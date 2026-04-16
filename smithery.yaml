@@ -1,0 +1,33 @@
+runtime: container
+build:
+  dockerfile: Dockerfile
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - mixpeekApiKey
+    properties:
+      mixpeekApiKey:
+        type: string
+        title: Mixpeek API Key
+        description: Your Mixpeek API key (https://mixpeek.com)
+      mixpeekNamespace:
+        type: string
+        title: Default namespace
+        description: Sent as the X-Namespace header on all requests
+      mixpeekApiBase:
+        type: string
+        title: API base URL
+        description: Override the API base (default https://api.mixpeek.com)
+        default: https://api.mixpeek.com
+  commandFunction: |
+    (config) => ({
+      command: "python",
+      args: ["server.py"],
+      env: {
+        MIXPEEK_API_KEY: config.mixpeekApiKey,
+        MIXPEEK_NAMESPACE: config.mixpeekNamespace || "",
+        MIXPEEK_API_BASE: config.mixpeekApiBase || "https://api.mixpeek.com"
+      }
+    })
